@@ -18,9 +18,9 @@ export default function FormSwitcher() {
         Login
       </ButtonLink>
       <ButtonLink
-        href="/auth/sign-in"
+        href="/auth/sign-up"
         className={clsx(
-          pathname.endsWith("/sign-in")
+          pathname.endsWith("/sign-up")
             ? "bg-secondary"
             : "bg-accent/0 text-primary-foreground"
         )}
