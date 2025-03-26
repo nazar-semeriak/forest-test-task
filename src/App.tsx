@@ -1,7 +1,12 @@
+import { Outlet } from "react-router-dom";
+
 function App() {
   return (
     <>
-      <div className="">react app</div>
+      <header></header>
+      <main className="flex flex-col items-center justify-center p-2 h-screen">
+        <Outlet></Outlet>
+      </main>
     </>
   );
 }
