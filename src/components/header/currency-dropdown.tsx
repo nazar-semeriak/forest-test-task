@@ -8,7 +8,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { CurrencyIcon, DollarSign } from "lucide-react";
+import { DollarSign } from "lucide-react";
 
 export default function CurrencyDropdown() {
   const [selectedCurrency, setSelectedCurrency] = useState(Currency.USD);
