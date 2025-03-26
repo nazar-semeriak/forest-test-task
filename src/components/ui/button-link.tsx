@@ -17,7 +17,7 @@ export default function ButtonLink({
     <Link
       to={href}
       className={clsx(
-        "h-10 w-full sm:w-80 flex justify-center items-center bg-secondary hover:bg-muted-foreground rounded-full transition-colors",
+        "h-10 w-full sm:w-80 flex justify-center items-center bg-secondary hover:bg-accent/80 rounded-full transition-colors",
         className
       )}
       {...props}
