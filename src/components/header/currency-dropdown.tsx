@@ -19,7 +19,7 @@ export default function CurrencyDropdown() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>
+      <DropdownMenuTrigger asChild>
         <Button variant={"secondary"} className="rounded-full w-20">
           <span className="inline-flex items-center gap-1">
             <DollarSign />

@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const loginSchema = z.object({
   email: z.string().email({ message: "Invalid email address" }),
@@ -19,6 +20,7 @@ const loginSchema = z.object({
 });
 
 export default function Login() {
+  const navigate = useNavigate();
   const form = useForm<z.infer<typeof loginSchema>>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
@@ -27,11 +29,30 @@ export default function Login() {
     },
   });
 
+  const onSubmit = async (data) => {
+    const response = await fetch("http://localhost:3000/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok) {
+      response.json().then((res) => {
+        localStorage.setItem("token", res.accessToken);
+        localStorage.setItem("userEmail", res.user.email);
+        alert("Login success");
+        navigate("/");
+      });
+    }
+  };
+
   return (
     <div className="flex flex-col p-3 rounded-xl">
       <Form {...form}>
         <form
-          onSubmit={form.handleSubmit(() => {})}
+          onSubmit={form.handleSubmit(onSubmit)}
           className="flex flex-col gap-6"
         >
           <div className="flex flex-col gap-2">

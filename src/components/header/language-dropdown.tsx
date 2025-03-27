@@ -18,7 +18,7 @@ export default function LanguageDropdown() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>
+      <DropdownMenuTrigger  asChild>
         <Button variant={"secondary"} className="rounded-full w-20">
           {selectedLanguage}
         </Button>
