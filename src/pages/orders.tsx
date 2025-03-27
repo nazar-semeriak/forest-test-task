@@ -16,7 +16,7 @@ export default function OrdersPage() {
   const [orders, setOrders] = useState<OrderType[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost/orders", { method: "GET" })
+    fetch("/api/orders", { method: "GET" })
       .then((response) => response.json())
       .then((res: OrderType[]) => setOrders(res));
   }, []);

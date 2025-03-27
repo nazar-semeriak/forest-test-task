@@ -32,7 +32,7 @@ export default function SignUp() {
   });
 
   const onSubmit = async (data: object) => {
-    const response = await fetch("http://localhost/users", {
+    const response = await fetch("/api/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

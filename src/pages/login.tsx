@@ -30,7 +30,7 @@ export default function Login() {
   });
 
   const onSubmit = async (data: object) => {
-    const response = await fetch("http://localhost:3001/users ", {
+    const response = await fetch("/api/users ", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
