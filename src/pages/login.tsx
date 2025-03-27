@@ -30,7 +30,7 @@ export default function Login() {
   });
 
   const onSubmit = async (data) => {
-    const response = await fetch("http://localhost:3000/login", {
+    const response = await fetch("http://localhost:3001/users ", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -43,7 +43,7 @@ export default function Login() {
         localStorage.setItem("token", res.accessToken);
         localStorage.setItem("userEmail", res.user.email);
         alert("Login success");
-        navigate("/");
+        navigate("/orders");
       });
     }
   };

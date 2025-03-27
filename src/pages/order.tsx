@@ -1,20 +1,27 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { OrderType } from "./orders";
 import Order from "@/components/orders/order";
 import { Button } from "@/components/ui/button";
+import { X } from "lucide-react";
 
 export default function OrderPage() {
   const { orderId } = useParams();
   const [order, setOrder] = useState<OrderType>({} as OrderType);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/orders/${orderId}`)
+    fetch(`http://localhost/orders/${orderId}`)
       .then((res) => res.json())
       .then((orderItem) => setOrder(orderItem));
   });
   return (
     <div className="flex flex-col gap-4 w-full h-full place-self-start">
+      <header className="flex gap-2 items-center text-secondary">
+        <Link to={"/"}>
+          <X className="h-8 w-8 min-w-8 bg-secondary text-primary rounded-full p-1 cursor-pointer hover:bg-accent/80 transition-colors" />
+        </Link>
+        #{order.id}
+      </header>
       <Order order={order} />
       <div className="flex flex-col gap-4">
         <div className="flex justify-between text-primary-foreground text-xl font-semibold">

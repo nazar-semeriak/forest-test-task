@@ -32,7 +32,7 @@ export default function SignUp() {
   });
 
   const onSubmit = async (data) => {
-    const response = await fetch("http://localhost:3000/register", {
+    const response = await fetch("http://localhost/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
