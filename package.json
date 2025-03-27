@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "server": "json-server db.json -m ./node_modules/json-server-auth",
+    "server": "json-server db.json -s ./node_modules/json-server-auth",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "json-server": "json-server --watch db.json --port 3001"
   },
   "dependencies": {
     "@hookform/resolvers": "^4.1.3",

@@ -12,7 +12,7 @@ function App() {
           <LanguageDropdown />
         </div>
       </header>
-      <main className="flex flex-1 flex-col items-center justify-center p-2 h-full">
+      <main className="flex flex-1 flex-col items-center justify-center p-2 h-full overflow-y-scroll">
         <Outlet></Outlet>
       </main>
     </>

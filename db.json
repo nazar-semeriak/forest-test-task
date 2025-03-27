@@ -1,3 +1,53 @@
 {
-  "users": []
+  "users": [],
+  "orders": [
+    {
+      "id": 1,
+      "createdAt": "20-01-2025",
+      "status": "Success",
+      "gameName": "Sons of the forest",
+      "gameId": 12,
+      "amount": "124.12"
+    },
+    {
+      "id": 2,
+      "createdAt": "20-01-2025",
+      "status": "Success",
+      "gameName": "Sons of the forest",
+      "gameId": 12,
+      "amount": "124.12"
+    },
+    {
+      "id": 3,
+      "createdAt": "20-01-2025",
+      "status": "Success",
+      "gameName": "Sons of the forest",
+      "gameId": 12,
+      "amount": "124.12"
+    },
+    {
+      "id": 4,
+      "createdAt": "20-01-2025",
+      "status": "Success",
+      "gameName": "Sons of the forest",
+      "gameId": 12,
+      "amount": "124.12"
+    },
+    {
+      "id": 5,
+      "createdAt": "20-01-2025",
+      "status": "Success",
+      "gameName": "Sons of the forest",
+      "gameId": 12,
+      "amount": "124.12"
+    },
+    {
+      "id": 6,
+      "createdAt": "20-01-2025",
+      "status": "Success",
+      "gameName": "Sons of the forest",
+      "gameId": 12,
+      "amount": "124.12"
+    }
+  ]
 }
