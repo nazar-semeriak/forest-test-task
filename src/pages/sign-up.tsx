@@ -31,7 +31,7 @@ export default function SignUp() {
     },
   });
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: object) => {
     const response = await fetch("http://localhost/users", {
       method: "POST",
       headers: {

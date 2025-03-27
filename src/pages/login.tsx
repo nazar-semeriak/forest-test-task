@@ -29,7 +29,7 @@ export default function Login() {
     },
   });
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: object) => {
     const response = await fetch("http://localhost:3001/users ", {
       method: "POST",
       headers: {
