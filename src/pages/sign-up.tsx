@@ -39,7 +39,7 @@ export default function SignUp() {
       },
       body: JSON.stringify(data),
     });
-  
+
     if (response.ok) {
       alert("Registration success");
       navigate("/auth/login");
