@@ -21,8 +21,8 @@ createRoot(document.getElementById("root")!).render(
             <Route path="sign-up" element={<SignIn />} />
           </Route>
           <Route path="/orders">
-          <Route index element={<OrdersPage />} />
-          <Route path=":orderId" element={<OrderPage />} />
+            <Route index element={<OrdersPage />} />
+            <Route path=":orderId" element={<OrderPage />} />
           </Route>
         </Route>
       </Routes>
