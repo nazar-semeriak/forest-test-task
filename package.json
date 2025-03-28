@@ -12,7 +12,7 @@
     "format": "prettier --write .",
     "deploy": "gh-pages -d dist",
     "postinstall": "npm run json-server &",
-    "json-server": "if [ \"$CI\" != \"true\" ]; then json-server --watch db.json --port 3001; fi"
+    "json-server": "json-server --watch db.json --port 3001"
   },
   "dependencies": {
     "@hookform/resolvers": "^4.1.3",

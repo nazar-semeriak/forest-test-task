@@ -10,7 +10,7 @@ export default function OrderPage() {
   const [order, setOrder] = useState<OrderType>({} as OrderType);
 
   useEffect(() => {
-    fetch(`http://localhost/orders/${orderId}`)
+    fetch(`http://localhost:3001/orders/${orderId}`)
       .then((res) => res.json())
       .then((orderItem) => setOrder(orderItem));
   });
